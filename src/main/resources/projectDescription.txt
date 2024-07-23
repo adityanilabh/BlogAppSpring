@@ -1,0 +1,153 @@
+
+Sure, here is a comprehensive project statement that includes all the specified features and requirements:
+
+Project Statement: Employee Management System with Spring Boot
+Project Overview:
+
+You are tasked with developing an Employee Management System (EMS) using Spring Boot. The application will handle CRUD
+ operations for employee data, authenticate users using OAuth2, and implement various security measures. It will also
+ be configured for different environments (development, production, and testing). The application will be deployed u
+ sing Bamboo, and version control will be managed with Git.
+
+Requirements:
+
+Authentication and Authorization:
+
+Implement OAuth2 authentication.
+Configure roles for Admin and User.
+Ensure secure access to APIs based on roles.
+Use JWT tokens for securing APIs.
+Environment Profiles:
+
+Create profiles for dev, prod, and test.
+Configure different data sources and properties for each profile.
+CRUD Operations:
+
+Implement CRUD operations for employee data.
+Use Spring Data JPA for database interactions.
+Database:
+
+Use an SQL database (e.g., PostgreSQL or MySQL).
+Configure entities and repositories for JPA.
+Security Features:
+
+Implement OAuth2 and JWT authentication.
+Role-based access control (RBAC) for Admin and User.
+Secure sensitive data using encryption.
+User Interface:
+
+Create a web interface for managing employee data.
+Use dropdowns to query results (e.g., by department, role).
+Provide an admin dashboard for managing users and roles.
+Configuration:
+
+Externalize configuration using application properties.
+Use YAML or properties files for different environments.
+Configure Bamboo for CI/CD pipeline.
+Integrate with Git for version control.
+Deployment:
+
+Deploy the application using Bamboo.
+Configure Bamboo plans for building, testing, and deploying the application.
+Advanced Features:
+
+Implement search functionality with dropdown filters.
+Provide logging and monitoring using Spring Boot Actuator.
+Implement custom exception handling and error responses.
+Step-by-Step Implementation:
+
+1. Project Setup
+Initialize Spring Boot Project:
+
+Use Spring Initializr to create a new Spring Boot project with the following dependencies:
+Spring Web
+Spring Security
+Spring Data JPA
+OAuth2 Resource Server
+Spring Boot Actuator
+PostgreSQL or MySQL Driver
+Lombok
+Folder Structure:
+
+arduino
+Copy code
+src
+ └── main
+     ├── java
+     │   └── com
+     │       └── example
+     │           └── ems
+     │               ├── config
+     │               ├── controller
+     │               ├── dto
+     │               ├── entity
+     │               ├── repository
+     │               ├── security
+     │               ├── service
+     │               └── util
+     ├── resources
+     │   ├── static
+     │   ├── templates
+     │   └── application.yml
+     └── test
+         └── java
+             └── com
+                 └── example
+                     └── ems
+2. Authentication and Authorization
+OAuth2 Configuration:
+
+Configure OAuth2 in security/OAuth2Config.java.
+JWT Token Configuration:
+
+Configure JWT tokens in security/JwtConfig.java.
+Role-Based Access Control:
+
+Create User, Role, and UserRole entities.
+Implement a custom UserDetailsService.
+3. Environment Profiles
+Profile-Specific Configuration:
+
+Create application-dev.yml, application-prod.yml, and application-test.yml in the resources folder.
+Configure different data sources and properties for each profile.
+4. CRUD Operations and Database
+Entities and Repositories:
+
+Create Employee entity and repository in entity and repository packages.
+CRUD Services and Controllers:
+
+Implement CRUD services in service package.
+Implement CRUD controllers in controller package.
+5. Security Features
+OAuth2 and JWT Authentication:
+
+Implement OAuth2 and JWT authentication in security package.
+Role-Based Access Control:
+
+Implement role-based access control in controllers.
+6. User Interface
+Admin Dashboard:
+
+Create an admin dashboard with Thymeleaf or a front-end framework.
+Dropdown Querying:
+
+Implement dropdown filters in the UI to query results.
+7. Configuration
+External Configuration:
+
+Externalize configuration using application.yml and profile-specific YAML files.
+8. Deployment with Bamboo
+Bamboo CI/CD Pipeline:
+
+Configure Bamboo plans for building, testing, and deploying the application.
+Integrate with Git for version control.
+9. Advanced Features
+Search Functionality:
+
+Implement search functionality with dropdown filters in the UI.
+Logging and Monitoring:
+
+Use Spring Boot Actuator for logging and monitoring.
+Custom Exception Handling:
+
+Implement custom exception handling in util/CustomExceptionHandler.java.
